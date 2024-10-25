@@ -1,0 +1,91 @@
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  background-color: var(--dark-blue);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advice-container {
+  padding: 1rem;
+  width: 100%;
+  max-width: 540px;
+}
+
+.advice-card {
+  background-color: var(--dark-grayish-blue);
+  padding: 2rem 2rem 4rem;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.advice-id {
+  color: var(--neon-green);
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.advice-text {
+  color: var(--light-cyan);
+  font-size: 28px;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.divider {
+  height: 16px;
+  background-image: url('data:image/svg+xml,<svg width="444" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="%23CEE3E9" d="M0 8h196v1H0zM248 8h196v1H248z"/><g transform="translate(212)" fill="%23CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 1rem;
+}
+
+.dice-button {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--neon-green);
+  color: var(--dark-blue);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.dice-button:hover {
+  box-shadow: 0 0 30px var(--neon-green);
+}
+
+@media (max-width: 375px) {
+  .advice-card {
+    padding: 1.5rem 1.5rem 3rem;
+  }
+
+  .advice-text {
+    font-size: 24px;
+  }
+}
